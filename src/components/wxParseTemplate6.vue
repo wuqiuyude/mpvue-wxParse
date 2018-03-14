@@ -1,4 +1,4 @@
-<template src="./wxParseTemplate"></template>
+<template src="./wxParseTemplate.html"></template>
 
 <script>
 import wxParseTemplate from './wxParseTemplate7'
