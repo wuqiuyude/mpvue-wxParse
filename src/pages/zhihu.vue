@@ -1,6 +1,8 @@
 <template lang="pug">
 .container
-  wxParse(:content="article", debug)
+  .raw(v-if="raw") {{article}}
+  wxParse(v-else, :content="article", debug)
+  .turn-btn(@click="raw = !raw") 切换
 </template>
 
 <script>
@@ -12,6 +14,7 @@ export default {
   },
   data () {
     return {
+      raw: false,
       article: ''
     }
   },
