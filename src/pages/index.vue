@@ -1,8 +1,9 @@
 <template lang="pug">
 .container
-  .raw(v-if="raw") {{readme}}
-  wxParse(v-else, :content="readme", debug)
-  .turn-btn(@click="raw = !raw") 切换
+  .raw(v-if="show === 'md'") {{readme.raw}}
+  .raw(v-if="show === 'html'") {{readme.html}}
+  wxParse(v-else, :content="readme.html", debug)
+  .turn-btn(@click="turn") 切换
 </template>
 
 <script>
@@ -15,8 +16,12 @@ export default {
   },
   data () {
     return {
-      raw: false,
-      readme: ''
+      types: ['rich', 'md', 'html'],
+      show: 'rich',
+      readme: {
+        raw: '',
+        html: ''
+      }
     }
   },
   mounted () {
@@ -26,8 +31,18 @@ export default {
     async getData () {
       wx.showLoading({ title: '加载中' })
       const res = await this.$request.get('https://gitlab.com/F-loat/mpvue-wxParse/raw/master/README.md')
-      this.readme = marked(res.data)
+      this.readme.raw = res.data
+      this.readme.html = marked(res.data)
       wx.hideLoading()
+    },
+    turn () {
+      const current = this.show
+      const currentIndex = this.types.indexOf(current)
+      if (currentIndex < this.types.length) {
+        this.show = this.types[currentIndex + 1]
+      } else {
+        this.show = this.types[0]
+      }
     }
   }
 }
