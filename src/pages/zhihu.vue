@@ -31,6 +31,7 @@ export default {
       const article = list.data.stories[0] || {}
       const detail = await this.$request.get(`https://news-at.zhihu.com/api/4/news/${article.id}`)
       this.article = detail.data.body
+      wx.stopPullDownRefresh()
       wx.hideLoading()
     }
   }

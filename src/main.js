@@ -12,7 +12,7 @@ export default {
   config: {
     pages: ['^pages/index'],
     window: {
-      backgroundTextStyle: 'light',
+      backgroundTextStyle: 'dark',
       navigationBarBackgroundColor: '#fff',
       navigationBarTitleText: 'mpvue-wxParse 示例',
       navigationBarTextStyle: 'black'

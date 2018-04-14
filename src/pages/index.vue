@@ -36,6 +36,7 @@ export default {
       const res = await this.$request.get('https://gitlab.com/F-loat/mpvue-wxParse/raw/master/README.md')
       this.readme.raw = res.data
       this.readme.html = marked(res.data)
+      wx.stopPullDownRefresh()
       wx.hideLoading()
     },
     turn () {
