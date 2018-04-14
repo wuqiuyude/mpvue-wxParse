@@ -7,12 +7,9 @@ export default {
 <style>
 .container {
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
   box-sizing: border-box;
   padding: 0 10px 5px;
+  overflow: auto;
 }
 
 .raw {
