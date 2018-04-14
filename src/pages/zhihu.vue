@@ -21,6 +21,9 @@ export default {
   mounted () {
     this.getData()
   },
+  onPullDownRefresh () {
+    this.getData()
+  },
   methods: {
     async getData () {
       wx.showLoading({ title: '加载中' })
