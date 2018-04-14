@@ -1,1 +1,7 @@
-module.exports = []
+module.exports = [
+  {
+    path: '/pages/index'
+  }, {
+    path: '/pages/zhihu'
+  }
+]

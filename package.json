@@ -11,7 +11,11 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
-    "mpvue": "^1.0.8"
+    "flyio": "^0.5.0",
+    "marked": "^0.3.19",
+    "mpvue": "^1.0.8",
+    "mpvue-wxparse": "^0.5.1",
+    "showdown": "^1.8.6"
   },
   "devDependencies": {
     "babel-core": "^6.22.1",
@@ -50,6 +54,8 @@
     "portfinder": "^1.0.13",
     "postcss-loader": "^2.0.6",
     "postcss-mpvue-wxss": "^1.0.0",
+    "pug": "^2.0.3",
+    "pug-loader": "^2.4.0",
     "px2rpx-loader": "^0.1.8",
     "rimraf": "^2.6.0",
     "semver": "^5.3.0",
