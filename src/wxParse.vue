@@ -8,7 +8,7 @@
 
 <template>
 <!--基础元素-->
-<div class="wxParse">
+<div @click="tapRichText" class="wxParse" :class="className">
   <block v-for="node of wxParseData.nodes" :key="node.index">
     <wxParseTemplate :node="node" />
   </block>
@@ -22,6 +22,10 @@ import wxParseTemplate from './components/wxParseTemplate0';
 export default {
   name: 'wxParse',
   props: {
+    className: {
+      type: String,
+      default: '',
+    },
     content: {
       type: String,
       default() {
@@ -35,6 +39,7 @@ export default {
           mode: 'aspectFit',
           padding: 0,
           lazyLoad: false,
+          preview: false,
         };
       },
     },
@@ -43,6 +48,18 @@ export default {
       default() {
         return false;
       },
+    },
+  },
+  methods: {
+    tapRichText(e) {
+      this.$emit('tap', e);
+      const data = e.target.dataset;
+      if (data.href) {
+        this.$emit('tapLink', data.href);
+      }
+      if (data.src) {
+        this.$emit('tapImg', data.src);
+      }
     },
   },
   components: {

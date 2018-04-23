@@ -51,10 +51,12 @@ export default {
     wxParseImgTap(e) {
       const { src } = e.target.dataset;
       if (!src) return;
-      wx.previewImage({
-        current: src, // 当前显示图片的http链接
-        urls: this.node.image.urls, // 需要预览的图片http链接列表
-      });
+      if (this.node.image.preview) {
+        wx.previewImage({
+          current: src, // 当前显示图片的http链接
+          urls: this.node.image.urls, // 需要预览的图片http链接列表
+        });
+      }
     },
     // 图片视觉宽高计算函数区
     wxParseImgLoad(e) {

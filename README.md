@@ -15,6 +15,7 @@
 | 名称              | 类型           | 默认值        | 描述           |
 | -----------------|--------------- | ------------- | ------------- |
 | content          | String         | 数据不能为空   | 渲染内容       |
+| className        | String         |              | wxParse的类名。可以为其添加样式       |
 | image            | Object         | 见下文        | 图片相关参数   |
 | debug            | Boolean        | false         | 调试开关       |
 
@@ -25,7 +26,15 @@
 | mode             | String         | 'aspectFit'   | 图片裁剪、缩放的模式 |
 | padding          | Number         | 0             | 图片内边距          |
 | lazyLoad         | Boolean        | false         | 图片懒加载          |
+| preview          | Boolean        | false         | 图片预览            |
 
+## 事件
+
+| 事件名            | 描述               |回调参数       |
+| -----------------|------------------ |--------------|
+| tap              | 当点击wxParse时触发 | even         |
+| tapLink          | 当点击链接时触发     | 链接地址      |
+| tapImg           | 当点击图片时触发     | 图片地址      |
 
 ## 基本使用方法
 
