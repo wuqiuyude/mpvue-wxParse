@@ -41,7 +41,7 @@
 * 安装
 
 ``` bash
-npm i mpvue-wxparse
+npm i mpvue-wxparse2
 ```
 
 * 使用
@@ -107,7 +107,7 @@ export default {
   test: /\.js$/,
   include: [
     resolve('src'),
-    resolve('node_modules/mpvue-wxparse')
+    resolve('node_modules/mpvue-wxparse2')
   ],
   use: [
     'babel-loader',
