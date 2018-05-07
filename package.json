@@ -1,6 +1,6 @@
 {
-  "name": "mpvue-wxparse",
-  "version": "0.5.4",
+  "name": "mpvue-wxparse2",
+  "version": "0.0.2",
   "description": "适用于 Mpvue 的微信小程序富文本解析自定义组件，支持HTML及markdown解析",
   "main": "src/wxParse.vue",
   "scripts": {
@@ -9,23 +9,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/F-loat/mpvue-wxParse.git"
+    "url": "git+https://github.com/yuanwen0327/mpvue-wxParse.git"
   },
   "keywords": [
     "mpvue",
     "wxparse",
     "wxapp"
   ],
-  "author": "icindy",
+  "author": "yuanwen",
   "contributors": [
     "Dicn",
-    "F-loat <chaimaoyuan@foxmail.com>"
+    "F-loat <chaimaoyuan@foxmail.com>",
+    "yuanwen <yuanwen0327@outlook.com>"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/F-loat/mpvue-wxParse/issues"
+    "url": "https://github.com/yuanwen0327/mpvue-wxParse/issues"
   },
-  "homepage": "https://github.com/F-loat/mpvue-wxParse#readme",
+  "homepage": "https://github.com/yuanwen0327/mpvue-wxParse#readme",
   "devDependencies": {
     "babel-eslint": "^8.2.2",
     "eslint": "^4.19.1",

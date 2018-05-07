@@ -4,7 +4,7 @@
     :mode="node.image.mode"
     :lazy-load="node.image.lazyLoad"
     :class="node.classStr"
-    :style="fitStyleStr"
+    :style="newStyleStr"
     :data-src="node.attr.src"
     :src="node.attr.src"
     @tap="wxParseImgTap"
@@ -32,11 +32,6 @@ export default {
   },
   mounted() {
     this.getSysWH();
-  },
-  computed: {
-    fitStyleStr() {
-      return this.newStyleStr || this.node.styleStr;
-    },
   },
   methods: {
     getSysWH() {
